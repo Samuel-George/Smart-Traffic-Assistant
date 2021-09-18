@@ -1,0 +1,27 @@
+{% extends 'layouts/main.html' %}
+{% block title %}{{ park.name }} | Park{% endblock %}
+{% block content %}
+<div class="row">
+	<div class="col-sm-6">
+		<h1 class="monospace">
+			{{ park.name }}
+		</h1>
+		<p>
+			<i class="fas fa-globe-americas"></i> {{ park.city }}, {{ park.state }}
+		</p>
+	</div>
+
+	<div class="col-sm-6">
+		<img src="{{ park.image_link }}" alt="Park Image" />
+	</div>
+</div>
+
+<section>
+	<h2 class="monospace">- There {% if park.busy_parks > 1 %}are{% else %}is{% endif %} {{ park.busy_parks }} busy {% if park.busy_parks == 1 %}Park{% else %}Parks{% endif %}</h2>
+
+	<h2 class="monospace">- There {% if park.ready_parks > 1 %}are{% else %}is{% endif %} {{ park.ready_parks }} available {% if park.ready_parks == 1 %}Park{% else %}Parks{% endif %}</h2>
+</section>
+
+
+{% endblock %}
+

@@ -1,0 +1,13 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Traffica | Parking{% endblock %}
+{% block content %}
+<div class="col-sm-6">
+	<h1>Welcom to smart parking system.</h1>
+</div>
+
+<div class="col-sm-6 hidden-sm hidden-xs">
+	<video width="700" height="400" loop muted autoplay name="media">
+		<source id="video-3" src="{{ url_for('static',filename='img/video-3.mp4') }}" type="video/mp4" alt="Front Video of traffic">
+	  </video>
+</div>
+{% endblock %}

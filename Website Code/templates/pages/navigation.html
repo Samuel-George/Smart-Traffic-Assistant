@@ -1,0 +1,27 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Traffica | Navigation{% endblock %}
+{% block content %}
+<head>
+	<meta http-equiv="refresh" content="" >
+</head>
+
+<div class="fullscreen-video">
+    <video width="1100" height="500" loop muted autoplay name="media">
+        <source id="video-0" src="{{ url_for('static',filename='img/video-0.mp4') }}" type="video/mp4" alt="Front Video of traffic">
+      </video>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="row row-offset-10">
+            <h1 class="text-center">Start your own trip.</h1>
+        </div>
+    </div>
+</div>
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Enter your ID</label>
+        <input name='id' class="form-control" placeholder="Enter ID">
+    </div>
+    <input type="submit" value="Start navigation" class="btn btn-primary btn-lg btn-block">
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Traffica{% endblock %}
+{% block content %}
+  
+<div class="row">
+	<div class="col-sm-6">
+		<h1>Traffica 🚦</h1>
+		<p class="lead">Where the traffic is smart.</p>
+		<h3>
+			<a href="/navigation"><button class="btn btn-primary btn-lg">Start navigation</button></a>
+		</h3>
+		<p class="lead">Smart Parks.</p>
+		<h3>
+			<a href="/parks"><button class="btn btn-primary btn-lg">Find a park</button></a>
+			<a href="/park/create"><button class="btn btn-default btn-lg">Add parking place</button></a>
+		</h3>
+		<p class="lead">Report an emergency case.</p>
+		<h3>
+			<a href="/case/create"><button class="btn btn-default btn-lg">Report case</button></a>
+		</h3>
+	</div>
+	<div class="col-sm-6 hidden-sm hidden-xs">
+		<video width="700" height="500" loop muted autoplay name="media">
+			<source id="video-2" src="{{ url_for('static',filename='img/video-2.mp4') }}" type="video/mp4" alt="Front Video of traffic">
+		  </video>
+	</div>
+</div>
+{% endblock %}
